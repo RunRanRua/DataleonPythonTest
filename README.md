@@ -1,12 +1,8 @@
 # DataleonPythonTest
 
----
-
 This project provides a Python class for detecting tables in document images (invoices, bank statements) using a pre-trained HuggingFace DETR-based object detection model. It supports table prediction and visualization with bounding boxes, and includes pytest tests for various scenarios.
 
 ## Project Structure
-
----
 
 ```bash
 DataleonPythonTest/
@@ -28,8 +24,6 @@ DataleonPythonTest/
 
 ## Installation
 
----
-
 1. Clone this repository:
 ```bash
 git clone https://github.com/RunRanRua/DataleonPythonTest.git
@@ -43,8 +37,6 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-
----
 
 ### How to initialize
 
