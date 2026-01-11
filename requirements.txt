@@ -1,0 +1,5 @@
+Pillow==12.1.0
+pytest==9.0.2
+torch==2.6.0+cu124
+transformers==4.57.1
+~orch==2.8.0

@@ -1,0 +1,1 @@
+from .tableDetector import TableDetector
