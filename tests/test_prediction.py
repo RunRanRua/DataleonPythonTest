@@ -1,8 +1,9 @@
-import pytest
 from detector import TableDetector
 import config
 
 detector = TableDetector(model_name=config.MODEL_NAME)
+
+
 
 def test_invoice_prediction_bordered():
     """Test prediction on an invoice image with bordered tables."""

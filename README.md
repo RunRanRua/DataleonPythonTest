@@ -17,10 +17,10 @@ DataleonPythonTest/
 │ ├── __init__.py
 │ └── tableDetector.py
 ├── tests/ 		# Pytest test cases
+│ ├── config.py
 │ ├── test_errors.py
 │ ├── test_prediction.py
 │ └── test_visualization.py
-├── config.py		# File conainting parameters
 ├── demo.py		# Demo script with visualization
 ├── requirements.txt # Project dependencies
 └── README.md
@@ -32,7 +32,7 @@ DataleonPythonTest/
 
 1. Clone this repository:
 ```bash
-git clone RunRanRua/DataleonPythonTest
+git clone https://github.com/RunRanRua/DataleonPythonTest.git
 cd DataleonPythonTest
 ```
 

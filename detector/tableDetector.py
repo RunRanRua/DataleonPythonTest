@@ -1,5 +1,5 @@
 from transformers import AutoImageProcessor, AutoModelForObjectDetection
-from PIL import Image, ImageDraw, UnidentifiedImageError
+from PIL import Image, ImageDraw
 import torch
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -67,9 +67,9 @@ class TableDetector:
         results =self._post_process(outputs, image.size)
 
         if len(results["boxes"]) == 0:
-            print("No tables detected.")
+            print(">>> No tables detected.")
         else:
-            print(f"Tables detected: {results['boxes'].shape[0]}")
+            print(f">>> Tables detected: {results['boxes'].shape[0]} tables found.")
         return results
 
     def visualize(self, image_path: str, results:dict, output_path: str = None, show: bool = True) -> Image.Image:
@@ -85,6 +85,12 @@ class TableDetector:
         Returns:
             - PIL.Image.Image: Image object with bounding boxes drawn.
         """
+        assert isinstance(results, dict)
+        assert "boxes" in results
+        assert "labels" in results
+        assert "scores" in results
+        assert len(results["boxes"]) > 0 
+        
         # load image
         image = self._load_image(image_path)
         draw = ImageDraw.Draw(image)
